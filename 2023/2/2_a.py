@@ -1,6 +1,6 @@
 import re
 
-with open('input.txt') as f:
+with open('2023/2/input.txt') as f:
     lines = f.readlines()
     cubes = {'red':12, 'green':13, 'blue':14}
     output = 0

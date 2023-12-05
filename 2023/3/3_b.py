@@ -41,7 +41,7 @@ def find_nearby_numbers(i, j, lines):
     return counter, numbers, lines
 
 def main():
-    with open('input.txt') as f:
+    with open('2023/3/input.txt') as f:
         lines = f.readlines()
         score = 0 
         for i, line in enumerate(lines):

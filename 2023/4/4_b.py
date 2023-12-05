@@ -1,6 +1,6 @@
 import numpy as np
 
-with open('input.txt') as f:
+with open('2023/4/input.txt') as f:
     lines = f.readlines()
     card_nums = np.zeros(len(lines), dtype=int) + 1
     for i, line in enumerate(lines):

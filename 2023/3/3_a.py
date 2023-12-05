@@ -1,6 +1,6 @@
 
 
-with open('input.txt') as f:
+with open('2023/3/input.txt') as f:
     lines = f.readlines()
     neighbors = [(-1, -1), (-1, 0), (-1, 1), (1, -1), (1, 0), (1, 1), (0, -1), (0, 1)]
     score = 0 

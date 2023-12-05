@@ -1,4 +1,4 @@
-with open('input.txt') as f:
+with open('2023/4/input.txt') as f:
     lines = f.readlines()
     score = 0 
     for line in lines:

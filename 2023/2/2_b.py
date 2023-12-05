@@ -1,7 +1,7 @@
 import re
 import numpy as np
 
-with open('input.txt') as f:
+with open('2023/2/input.txt') as f:
     lines = f.readlines()
     output = 0
     for line in lines:

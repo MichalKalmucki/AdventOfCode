@@ -2,7 +2,7 @@ with open('input.txt') as f:
     lines = f.readlines()
     score = 0 
     for line in lines:
-        winning, selected = line[10:-1].split('|')
+        winning, selected = line.split(':')[1][1:-1].split('|')
         winning = {int(num) for num in winning.split()}
         selected = [int(num) for num in selected.split()]
         card_score = 0

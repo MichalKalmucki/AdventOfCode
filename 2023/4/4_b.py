@@ -4,7 +4,7 @@ with open('input.txt') as f:
     lines = f.readlines()
     card_nums = np.zeros(len(lines), dtype=int) + 1
     for i, line in enumerate(lines):
-        winning, selected = line[10:-1].split('|')
+        winning, selected = line.split(':')[1][1:-1].split('|')
         winning = {int(num) for num in winning.split()}
         selected = [int(num) for num in selected.split()]
         card_score = 0

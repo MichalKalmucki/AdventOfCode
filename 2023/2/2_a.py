@@ -9,7 +9,7 @@ with open('input.txt') as f:
         id = id.strip('Game ')
         possible = True
         pattern = r'[;,]'
-        result = re.split(pattern, result[:-1])
+        result = re.split(pattern, result)
         for res in result:
             num, color = res.split()
             if cubes[color] < int(num):

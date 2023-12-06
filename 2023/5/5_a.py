@@ -1,4 +1,5 @@
 import numpy as np
+## lookup 46294175
 
 with open('2023/5/input.txt', 'r') as f:
     lines = f.readlines()

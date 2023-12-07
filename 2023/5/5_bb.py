@@ -18,8 +18,8 @@ with open('2023/5/input.txt', 'r') as f:
         if line[0] < '0' or line[0] > '9':
             continue
         destination, source, amount = [int(num) for num in line.replace('\n', '').split()]
-        start_index = bisect_left(seeds, source, key=lambda x: x[0])
-        end_index = bisect_right(seeds, source + amount - 1, key=lambda x: x[1])
+        # start_index = bisect_left(seeds, source, key=lambda x: x[0])
+        # end_index = bisect_right(seeds, source + amount - 1, key=lambda x: x[1])
         for i, seed in enumerate(seeds_cpy):
             if seed[0] >= source and seed[0] < source + amount - 1:
                 if seed[1] > source + amount - 1:
@@ -36,12 +36,12 @@ with open('2023/5/input.txt', 'r') as f:
                     seeds_cpy[i] = (float('inf'), float('inf'))
                     if seed in seeds:
                         seeds.remove(seed)
-                    # print(f'destination {destination}, source {source}, amount {amount}')
-                    # print(f'seed {seed}')
-                    # print(f'normal {(seed[0] + destination - source, seed[1] + destination - source)}')
-                    # if (seed[0] + destination - source, seed[1] + destination - source) == (7971591, 30062974):
-                    #     print(f'2 {seed}')
-                    #     exit()
+                    print(f'destination {destination}, source {source}, amount {amount}')
+                    print(f'seed {seed}')
+                    print(f'normal {(seed[0] + destination - source, seed[1] + destination - source)}')
+                    if (seed[0] + destination - source, seed[1] + destination - source) == (7971591, 30062974):
+                        print(f'2 {seed}')
+                        exit()
             
             elif seed[1] > source and seed[1] < source + amount - 1:
                 if seed in seeds:
@@ -66,7 +66,6 @@ with open('2023/5/input.txt', 'r') as f:
                     seeds_cpy.append((seed[0], source))
                 
                 seeds.append((source + amount, seed[1]))
-                
                 seeds_cpy.append((destination, destination + amount - 1))
                 # if (seed[0], source) == (7971591, 30062974) or (source + amount, seed[1]) == (7971591, 30062974):
                 #     print(f'4 {seed}')

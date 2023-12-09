@@ -27,7 +27,8 @@ def main():
             if current_nodes[node_id][-1] == 'Z':
                 counters.append(i)
                 break
-
+    
+    #this works only bercause node ending with z is at the end of the cycle for each starting node
     print(lcm(*counters))
 
 if __name__ == '__main__':

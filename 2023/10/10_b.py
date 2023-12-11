@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-#I thought it will be fun to solve this problem with OpenCV since we practiced using this library during computer vision classes.
+#I thought it would be fun to solve this problem with OpenCV since we utilized this library during computer vision classes.
 
 with open('2023/10/input.txt', 'r') as file:
     lines = file.readlines()

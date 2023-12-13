@@ -1,14 +1,12 @@
 import numpy as np
 
+#Use numpy to slice matrix in possible mirror positions and compare them
 def find_mirror(matrix, num_diff):
     for i in range(len(matrix[0])):
         low_bound = max(0, 2 *(i+1)-len(matrix[0]))
-        flag = False
         if np.sum(matrix[:,low_bound:i + 1] != matrix[:,i + 1:2*i - low_bound + 2][::, ::-1] ) == num_diff and matrix[:,low_bound:i + 1].shape[1] > 0:
-            flag = True
-        if flag:
             return i
-
+            
 def task(inputs, task_num):
     score = 0
     for matrix in inputs:
